@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app = "DashboardApp">
+<head>
+	<link rel="stylesheet" href="/DashboardApp.css">
+	<title>DashboardApp</title>
+
+</head>
+	<body>
+
+
+
+		<div class="video-background">
+			<div class="overlayBG">
+			</div>
+
+
+
+		    <div class="video-foreground">
+		      <iframe src="https://www.youtube.com/embed/1NCZ9hgjIzI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ&vq=hd1440&start=169
+		      " frameborder="0" allowfullscreen></iframe>
+		    </div>
+			 </div>
+
+
+
+<ui-view></ui-view>
+
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+<script src =" https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js">
+
+</script>
+<script src = "./app.js"></script>
+<script src = "/Services/timeService.js"></script>
+<script src = "./Controllers/WeatherCTRL.js"></script>
+<script src = "./Controllers/HomeCTRL.js"></script>
+<script src = "./Services/weatherService.js"></script>
+<script src = "./Services/quoteService.js"></script>
+<script src = "./Services/nameService.js"></script>
+
+	</body>
+</html>

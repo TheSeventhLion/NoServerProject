@@ -1,0 +1,30 @@
+
+<div id="vidtop-content">
+
+
+<div>
+
+    <div class="links">LINKS</div>
+	 <a href=""></a>
+
+
+
+    <div ui-sref="weather">Weather</div>
+
+</div>
+
+<div class="time"> {{ time }}</div>
+
+<form class="" ng-submit = "addName(userName)" ng-if="!name">
+	<input type="text" name="name" placeholder="What is your name?" ng-model="userName">
+<button type="submit">Enter</button>
+</form>
+
+<div class="" ng-if = "name">
+	{{period}}{{name}}
+</div>
+
+
+<div class="nameBox">{{ userName }}</div>
+
+<div class="quoteBox">{{ quote.quote }} - {{quote.author_name}}</div>
