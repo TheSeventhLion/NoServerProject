@@ -20,10 +20,11 @@ angular.module("DashboardApp")
 			//This sets up my clock
 
 			function displayTime(){
-				$scope.time = moment().format("h:mm:A")
+				$scope.time = moment().format("h:mm A")
+				$scope.timeSplit = moment().format("h:mm:A")
 				console.log($scope.time)
 
-				var dayEvents= $scope.time.split(':');
+				var dayEvents= $scope.timeSplit.split(':');
 				console.log(dayEvents);
 				if(dayEvents[2] == 'PM'){
 					if(dayEvents[0] < 6){
@@ -38,7 +39,7 @@ angular.module("DashboardApp")
 				$scope.$apply()
 			}
 
-			$scope.time = moment().format("h:mm:A")
+			$scope.time = moment().format("h:mm A")
 			setInterval(displayTime,1000)
 			console.log(moment().format)
 
@@ -48,10 +49,4 @@ angular.module("DashboardApp")
 				nameService.store("name" , name);
 				$scope.name = name
 			}
-
-
-
-
-
-
-    });
+})

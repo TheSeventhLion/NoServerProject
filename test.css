@@ -1,0 +1,96 @@
+.nav-bar{
+	display: flex;
+	justify-content: space-between;
+
+
+}
+
+.overlayBG{
+	background-color: black;
+	z-index:5;
+	width:100vw;
+	height:100vh;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:.6;
+
+}
+
+* { box-sizing: border-box; }
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+	top: 0;
+	color: white;
+	/*font-family:*/
+	/*font-size: 80px;*/
+
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+
+
+.text {
+display: flex;
+
+
+}
+
+.time{
+	font-size: 160px;
+	padding: 5px ;
+    /*border: 3px solid green;*/
+    text-align: center;
+
+
+}
+
+.nameBox{
+	font-size: 60px;
+	padding: 30px;
+    /*border: 1px solid green;*/
+    text-align: center;
+	 border-bottom: 30px;
+
+
+
+}
+
+.quoteBox{
+	font-size: 35px;
+	padding: 30px;
+	/*border: 1px solid green;*/
+	text-align: center;
+	font-family: 'Homemade Apple', cursive;
+	}
+
+
+.allText{
+	position: absolute;
+	bottom: 100px;
+
+
+}
+
+}

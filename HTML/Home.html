@@ -1,30 +1,50 @@
+<link href="https://fonts.googleapis.com/css?family=Cinzel|Lobster|Questrial|Rock+Salt|Special+Elite" rel="stylesheet">
+
 
 <div id="vidtop-content">
 
 
 <div>
 
-    <div class="links">LINKS</div>
-	 <a href=""></a>
+	 <div class="dropdown" style="float:left;">
+	   <button class="dropbtn">Links</button>
+	   <div class="dropdown-content" style="left:0;">
+	     <a href="https://javascript30.com/">JavaScript 30</a>
+	     <a href="https://www.codewars.com/kata/5679aa472b8f57fb8c000047/train/javascript">Code Wars</a>
+	     <a href="http://overapi.com/javascript">JS CheetSheet</a>
+		  <a href="https://www.npmjs.com/">NPM JS</a>
+		  <a href="https://github.com/DevMountain">Dev Mountain GitHub</a>
+		  <a href="http://www.madeon.fr/adventuremachine/?t=12,21,29,31">Madeon's Adventure Machine</a>
+		  <a href="http://www.hackertyper.com/">For True OG Hackers only!</a>
+	   </div>
+	 </div>
 
 
 
-    <div ui-sref="weather">Weather</div>
+
+
+    <div ui-sref="weather" class = "weatherLink">10 Day Forcast :
+
+		 <!-- How do I use this to put into Home Upper Right Corner -->
+	 {{location.city}} , {{forecast.location.state}}</div>
+
+
 
 </div>
+<div class="allText">
 
 <div class="time"> {{ time }}</div>
 
 <form class="" ng-submit = "addName(userName)" ng-if="!name">
-	<input type="text" name="name" placeholder="What is your name?" ng-model="userName">
-<button type="submit">Enter</button>
+	<input type="text" class= "inputLine" name="name" placeholder="What is your name?" ng-model="userName">
 </form>
 
-<div class="" ng-if = "name">
+<div class="inputLine" ng-if = "name">
 	{{period}}{{name}}
 </div>
-
 
 <div class="nameBox">{{ userName }}</div>
 
 <div class="quoteBox">{{ quote.quote }} - {{quote.author_name}}</div>
+
+</div>
