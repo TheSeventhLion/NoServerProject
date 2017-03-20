@@ -8,40 +8,43 @@
 
    <div class="todaysForecast box">
 
-		{{location.city}} {{forecast.location.state}}<br>
+		{{location.city}} , {{forecast.location.state}} <br>
 	   {{forecast.location.zip}}
+
    </div>
 
-   <div class="currentWeather box">
-        Current conditions for {{location.city}}, {{forecast.location.state}} <br> {{forecast.current_observation.temperature_string }}
+   <div class="currentWeather box color1">
+        Current conditions for {{location.city}}, {{forecast.location.state}} <br>
+		  <br>
+
+		  {{forecast.current_observation.temperature_string }}
    </div>
 
-   <div class="cloudCondition box">
-		<img class="cloudImg" src="../Icons/weather_icons-16.svg">
+   <div class="cloudCondition box color2">
         Cloud condition : {{forecast.current_observation.weather}}
    </div>
 
-   <div class="UVindex box">
+   <div class="UVindex box color1">
         UV index: {{forecast.current_observation.UV}}
    </div>
 
-   <div class="feelsLike box">
+   <div class="feelsLike box color2">
         Weather feels like {{forecast.current_observation.feelslike_f}} °F
    </div>
 
-   <div class="dewpoint box">
+   <div class="dewpoint box color1">
         Dewpoint: {{forecast.current_observation.dewpoint_string}}
    </div>
 
-   <div class="windSpeeed box">
+   <div class="windSpeeed box color2">
         Wind Speed: {{forecast.current_observation.wind_mph}} MPH at {{forecast.current_observation.wind_degrees}} ° towards the {{forecast.current_observation.wind_dir}}
    </div>
 
 
-   <div class="Visibility box">Visibility {{forecast.current_observation.visibility_mi }} Miles
+   <div class="Visibility box color1">Visibility {{forecast.current_observation.visibility_mi }} Miles
    </div>
 
-   <div class="lastUpdate box">
+   <div class="lastUpdate box color2">
         {{forecast.current_observation.observation_time}}
    </div>
     <!-- <br>{{forecast.current_observation.}}</br> -->

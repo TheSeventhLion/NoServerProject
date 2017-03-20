@@ -211,16 +211,23 @@
 	margin:10px;
 	padding: 30px;
 	font-size: 40px;
+	text-shadow: 5px 2px 10px grey;
 
 }
 
 .todaysForecast{
-	border-bottom: solid white 1px;
+	border-bottom: solid silver 1px;
 	margin:30px;
-
-	font-size: 90px;
+	text-shadow: 5px 2px 10px grey;
+	font-size: 100px;
+	color: white;
 }
-.cloudImg{
-color:white;
 
+.color1{
+	font-size: 55px;
+	color: rgb(67, 255, 0)
+}
+.color2{
+	font-size: 55px;
+	color: rgb(62, 184, 230);
 }
