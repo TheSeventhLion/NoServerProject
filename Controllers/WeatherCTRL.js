@@ -18,6 +18,7 @@ angular.module("DashboardApp")
 			})
 		});
 
+// install if else logic here for UV index calculation. https://www.epa.gov/sunsafety/uv-index-scale-0
 
 
 

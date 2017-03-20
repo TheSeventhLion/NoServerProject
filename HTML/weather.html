@@ -1,32 +1,41 @@
-<div ui-sref="home" class= "Home">Home</div>
+
+
+<div ui-sref="home" class= "HomeButton">Home</div>
 
 <div class="weatherContainer">
 
-Todays Forcast {{location.city}}
-{{forecast.location.state}}
-{{forecast.location.zip}}
+	<div class="Todays Forcast">
+			Todays Forcast {{location.city}}
+			{{forecast.location.state}}
+			{{forecast.location.zip}}
+	</div>
+
+	<div class="Cloud condition">
+			<br>
+			Cloud condition : {{forecast.current_observation.weather}}
+			</br>
+	</div>
 
 <br>
-Cloud condition : {{forecast.current_observation.weather}}
+UV index: {{forecast.current_observation.UV}} 
 </br>
 
-<br>
-UV index is currently displaying  " {{forecast.current_observation.UV}} "
-</br>
 <br>Current weather conditions for {{location.city}},
 {{forecast.location.state}} <br> {{forecast.current_observation.temperature_string
 }}</br>
 Weather feels like {{forecast.current_observation.feelslike_f}} °F
 </br>
 
-<br>{{forecast.current_observation.dewpoint_string}}</br>
-<br>Wind Speed:  {{forecast.current_observation.wind_mph}} MPH</br>
+<br>Dewpoint: {{forecast.current_observation.dewpoint_string}}</br>
+<br>Wind Speed:  {{forecast.current_observation.wind_mph}} MPH at
+{{forecast.current_observation.wind_degrees
+}} °</br>
 <br>{{forecast.current_observation.observation_time}}</br>
 
+<br>Visibility {{forecast.current_observation.visibility_mi
+}}  Miles</br>
 <!-- <br>{{forecast.current_observation.}}</br> -->
-<!-- <br>{{forecast.current_observation.}}</br>
-<br>{{forecast.current_observation.}}</br>
-<br>{{forecast.current_observation.}}</br>
-<br>{{forecast.current_observation.}}</br> -->
+<!-- <br>{{forecast.current_observation.}}</br> -->
+<!-- <br>{{forecast.current_observation.}}</br> -->
 
 </div>

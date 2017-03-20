@@ -1,7 +1,7 @@
 // INITILIZE CONTROLLER
 // ============================================================
 angular.module("DashboardApp")
-    .controller("HomeCTRL", function($scope, quoteService, nameService) {
+    .controller("HomeCTRL", function($scope, quoteService, nameService, WeatherService) {
 
         // VARIABLES
         // ============================================================
@@ -49,4 +49,15 @@ angular.module("DashboardApp")
 				nameService.store("name" , name);
 				$scope.name = name
 			}
+
+			WeatherService.getLocation().then(function(rezLoc) {
+				  $scope.location = rezLoc.data;
+
+				  WeatherService.getForecast($scope.location.region, $scope.location.city).then(function(response){
+					  $scope.forecast = response.data;
+					  console.log($scope.forecast)
+				  })
+			  });
+
+
 })
