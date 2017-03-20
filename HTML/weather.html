@@ -1,41 +1,51 @@
+<div ui-sref="home" class="HomeButton">
+
+   Back to Dashboard</div>
 
 
-<div ui-sref="home" class= "HomeButton">Home</div>
 
 <div class="weatherContainer">
 
-	<div class="Todays Forcast">
-			Todays Forcast {{location.city}}
-			{{forecast.location.state}}
-			{{forecast.location.zip}}
-	</div>
+   <div class="todaysForecast box">
 
-	<div class="Cloud condition">
-			<br>
-			Cloud condition : {{forecast.current_observation.weather}}
-			</br>
-	</div>
+		{{location.city}} {{forecast.location.state}}<br>
+	   {{forecast.location.zip}}
+   </div>
 
-<br>
-UV index: {{forecast.current_observation.UV}} 
-</br>
+   <div class="currentWeather box">
+        Current conditions for {{location.city}}, {{forecast.location.state}} <br> {{forecast.current_observation.temperature_string }}
+   </div>
 
-<br>Current weather conditions for {{location.city}},
-{{forecast.location.state}} <br> {{forecast.current_observation.temperature_string
-}}</br>
-Weather feels like {{forecast.current_observation.feelslike_f}} °F
-</br>
+   <div class="cloudCondition box">
+		<img class="cloudImg" src="../Icons/weather_icons-16.svg">
+        Cloud condition : {{forecast.current_observation.weather}}
+   </div>
 
-<br>Dewpoint: {{forecast.current_observation.dewpoint_string}}</br>
-<br>Wind Speed:  {{forecast.current_observation.wind_mph}} MPH at
-{{forecast.current_observation.wind_degrees
-}} °</br>
-<br>{{forecast.current_observation.observation_time}}</br>
+   <div class="UVindex box">
+        UV index: {{forecast.current_observation.UV}}
+   </div>
 
-<br>Visibility {{forecast.current_observation.visibility_mi
-}}  Miles</br>
-<!-- <br>{{forecast.current_observation.}}</br> -->
-<!-- <br>{{forecast.current_observation.}}</br> -->
-<!-- <br>{{forecast.current_observation.}}</br> -->
+   <div class="feelsLike box">
+        Weather feels like {{forecast.current_observation.feelslike_f}} °F
+   </div>
+
+   <div class="dewpoint box">
+        Dewpoint: {{forecast.current_observation.dewpoint_string}}
+   </div>
+
+   <div class="windSpeeed box">
+        Wind Speed: {{forecast.current_observation.wind_mph}} MPH at {{forecast.current_observation.wind_degrees}} ° towards the {{forecast.current_observation.wind_dir}}
+   </div>
+
+
+   <div class="Visibility box">Visibility {{forecast.current_observation.visibility_mi }} Miles
+   </div>
+
+   <div class="lastUpdate box">
+        {{forecast.current_observation.observation_time}}
+   </div>
+    <!-- <br>{{forecast.current_observation.}}</br> -->
+    <!-- <br>{{forecast.current_observation.}}</br> -->
+    <!-- <br>{{forecast.current_observation.}}</br> -->
 
 </div>
